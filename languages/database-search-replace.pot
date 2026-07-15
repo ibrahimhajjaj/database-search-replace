@@ -1,0 +1,360 @@
+# Copyright (C) 2026 Ibrahim Hajjaj
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Database Search & Replace 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/database-search-replace\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-07-15T20:27:23+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: database-search-replace\n"
+
+#. Plugin Name of the plugin
+#: includes/admin/class-admin-page.php:39
+#: includes/admin/class-admin-page.php:40
+msgid "Database Search & Replace"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/database-search-replace/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Preview database replacements, back them up, and undo them."
+msgstr ""
+
+#. Author of the plugin
+msgid "Ibrahim Hajjaj"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://safeguard.verdelic.com"
+msgstr ""
+
+#: database-search-replace.php:34
+msgid "Database Search & Replace requires PHP 7.4 or newer."
+msgstr ""
+
+#: database-search-replace.php:49
+msgid "Database Search & Replace could not load its required files. Reinstall the plugin and try again."
+msgstr ""
+
+#: includes/admin/class-admin-page.php:58
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: includes/admin/class-admin-page.php:62
+msgid "Database Search & Replace requires JavaScript to use this screen."
+msgstr ""
+
+#: includes/class-plugin.php:146
+msgid "Migrate a whole site"
+msgstr ""
+
+#: includes/cli/class-cli-command.php:115
+msgid "Search and replacement values are required."
+msgstr ""
+
+#: includes/cli/class-cli-command.php:122
+msgid "Apply this replacement to the selected database tables?"
+msgstr ""
+
+#: includes/cli/class-cli-command.php:126
+msgid "Processing database tables"
+msgstr ""
+
+#. translators: %s: apply job identifier.
+#: includes/cli/class-cli-command.php:136
+msgid "Replacement completed. Undo with: wp safesr undo %s"
+msgstr ""
+
+#: includes/cli/class-cli-command.php:165
+msgid "A job identifier is required."
+msgstr ""
+
+#: includes/cli/class-cli-command.php:168
+msgid "Restore all values backed up by this job?"
+msgstr ""
+
+#: includes/cli/class-cli-command.php:171
+msgid "Restoring database values"
+msgstr ""
+
+#. translators: %s: undo job identifier.
+#: includes/cli/class-cli-command.php:175
+msgid "Undo completed. Job ID: %s"
+msgstr ""
+
+#. translators: %s: physical database table name.
+#: includes/cli/class-cli-command.php:272
+msgid "Table is not available for the current site: %s"
+msgstr ""
+
+#: includes/cli/class-cli-command.php:309
+msgid "The job could not be loaded."
+msgstr ""
+
+#: includes/cli/class-cli-command.php:323
+msgid "The job did not complete."
+msgstr ""
+
+#: includes/cli/class-cli-command.php:377
+msgid "The requested output format is not supported."
+msgstr ""
+
+#: includes/jobs/class-job-manager.php:66
+msgid "Apply requires a completed preview."
+msgstr ""
+
+#: includes/jobs/class-job-manager.php:69
+msgid "The preview belongs to another user."
+msgstr ""
+
+#: includes/jobs/class-job-manager.php:73
+msgid "The preview has expired. Run it again before applying."
+msgstr ""
+
+#: includes/jobs/class-job-manager.php:76
+msgid "The apply settings do not match the preview."
+msgstr ""
+
+#: includes/jobs/class-job-manager.php:101
+msgid "Only a completed or failed apply job can be undone."
+msgstr ""
+
+#: includes/jobs/class-job-manager.php:110
+msgid "This job does not have a backup to restore."
+msgstr ""
+
+#: includes/jobs/class-job-manager.php:113
+msgid "This job has already been undone."
+msgstr ""
+
+#: includes/jobs/class-job-manager.php:116
+msgid "A more recent run must be undone first."
+msgstr ""
+
+#: includes/jobs/class-job-manager.php:529
+msgid "The background job could not be created."
+msgstr ""
+
+#: includes/jobs/class-job-manager.php:580
+msgid "Another search and replace job is already active."
+msgstr ""
+
+#: includes/rest/class-rest-controller.php:226
+msgid "You are not allowed to manage search and replace jobs."
+msgstr ""
+
+#: includes/rest/class-rest-controller.php:361
+msgid "Only a queued or running job can be canceled."
+msgstr ""
+
+#: includes/rest/class-rest-controller.php:518
+msgid "No searchable tables were selected."
+msgstr ""
+
+#: includes/rest/class-rest-controller.php:735
+msgid "The requested search and replace job was not found."
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:96
+msgid "Tables to search"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:99
+msgid "· %1$d of %2$d"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:118
+msgid "All"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:126
+msgid "None"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:133
+msgid "Filter tables"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:137
+msgid "Filter tables, e.g. wp_ or woo…"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:174
+msgid "protected"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:183
+msgid "%1$s rows · %2$s"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:196
+msgid "Scroll for all tables. Protected tables (like"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:201
+msgid ") stay off. Change that in Settings."
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:210
+msgid "Case-sensitive"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:211
+msgid "Match exact casing"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:215
+msgid "Regex"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:216
+msgid "Pattern matching"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:220
+msgid "Thorough scan"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:221
+msgid "Inspect encoded values"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:227
+msgid "Replace GUIDs"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:235
+msgid "why off?"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:238
+msgid "Changing post GUIDs can break feeds and comments. Leave this off unless you know you need it."
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:257
+msgid "A GUID is a permanent post identifier. Feed readers and comment systems use it to recognize a post, even after its public URL changes."
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:268
+msgid "Exclusions"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:270
+msgid "never touch matching text"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:283
+msgid "Remove %s"
+msgstr ""
+
+#: src/components/AdvancedPanel.tsx:301
+msgid "add pattern, press Enter…"
+msgstr ""
+
+#: src/components/ConfirmModal.tsx:69
+msgid "Ready when you are."
+msgstr ""
+
+#: src/components/ConfirmModal.tsx:76
+msgid "We’ll create a safety snapshot first, then apply %s changes. You can undo this in one click afterward."
+msgstr ""
+
+#: src/components/ConfirmModal.tsx:93
+msgid "Create a safety snapshot before applying"
+msgstr ""
+
+#: src/components/ConfirmModal.tsx:99
+msgid "Stores the affected rows locally before any write."
+msgstr ""
+
+#: src/components/ConfirmModal.tsx:108
+msgid "Applying without a snapshot disables one-click undo for this run."
+msgstr ""
+
+#: src/components/ConfirmModal.tsx:120
+msgid "Back up the whole site with SafeGuard first."
+msgstr ""
+
+#: src/components/ConfirmModal.tsx:132
+msgid "Cancel"
+msgstr ""
+
+#: src/components/ConfirmModal.tsx:140
+msgid "Back up & apply"
+msgstr ""
+
+#: src/components/ConfirmModal.tsx:141
+msgid "Apply changes"
+msgstr ""
+
+#: src/components/DiffRow.tsx:25
+msgid "Shield: protected table, skipped to prevent login issues."
+msgstr ""
+
+#: src/components/DiffRow.tsx:31
+msgid "Info: GUID left unchanged to protect feeds and comments."
+msgstr ""
+
+#: src/components/DiffRow.tsx:36
+msgid "Info: this value could not be read and was skipped safely."
+msgstr ""
+
+#: src/components/DiffRow.tsx:76
+msgid "− Before"
+msgstr ""
+
+#: src/components/DiffRow.tsx:84
+msgid "+ After"
+msgstr ""
+
+#: src/components/DiffRow.tsx:94
+msgid "Excerpt shortened for display."
+msgstr ""
+
+#: src/components/Progress.tsx:51
+msgid "Progress could not be refreshed."
+msgstr ""
+
+#: src/components/Progress.tsx:77
+msgid "Restoring…"
+msgstr ""
+
+#: src/components/Progress.tsx:89
+msgid "Restoring your safety snapshot…"
+msgstr ""
+
+#: src/components/Progress.tsx:93
+msgid "Applying changes safely…"
+msgstr ""
+
+#: src/components/Progress.tsx:99
+msgid "The job is running safely in the background."
+msgstr ""
+
+#: src/components/Progress.tsx:116
+msgid "Processing table %1$s of %2$s"
+msgstr ""
+
+#: src/components/Progress.tsx:128
+msgid "%1$s rows scanned · %2$s"
+msgstr ""
+
+#: src/components/Progress.tsx:131
+msgid "Preparing…"
+msgstr ""
+
+#: src/components/Progress.tsx:136
+msgid "You can safely leave this page."
+msgstr ""
+
+#: src/components/Progress.tsx:141
+msgid "The work keeps running in the background."
+msgstr ""
