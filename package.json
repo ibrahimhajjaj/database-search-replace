@@ -1,0 +1,25 @@
+{
+  "name": "database-search-replace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "wp-env": "wp-env",
+    "test:php": "wp-env run tests-cli --env-cwd=wp-content/plugins/database-search-replace phpunit -c phpunit.integration.xml.dist",
+    "test:php:multisite": "wp-env run tests-cli --env-cwd=wp-content/plugins/database-search-replace env WP_MULTISITE=1 phpunit -c phpunit.integration.xml.dist --group multisite",
+    "test:js": "wp-scripts test-unit-js",
+    "lint:js": "wp-scripts lint-js",
+    "make-pot": "bash bin/make-pot.sh",
+    "package": "bash scripts/build-package.sh"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@wordpress/element": "^8.3.0",
+    "@wordpress/env": "^11.11.0",
+    "@wordpress/i18n": "^6.24.0",
+    "@wordpress/scripts": "^33.0.0"
+  }
+}

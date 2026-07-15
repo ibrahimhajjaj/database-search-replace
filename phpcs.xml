@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	name="Database Search Replace"
+	xsi:noNamespaceSchemaLocation="https://schema.phpcodesniffer.com/phpcs.xsd">
+	<description>Coding standards for Database Search &amp; Replace.</description>
+
+	<file>.</file>
+
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/build/*</exclude-pattern>
+	<exclude-pattern>/dist/*</exclude-pattern>
+	<exclude-pattern>/reference/*</exclude-pattern>
+
+	<arg name="extensions" value="php" />
+	<arg name="parallel" value="8" />
+	<arg value="sp" />
+
+	<config name="minimum_wp_version" value="6.2" />
+	<config name="testVersion" value="7.4-" />
+
+	<rule ref="WordPress" />
+	<rule ref="PHPCompatibilityWP" />
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="database-search-replace" />
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="safesr" />
+				<element value="SafeSR" />
+				<element value="SAFESR" />
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.DB.DirectDatabaseQuery">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+
+	<!--
+	Tests may stub third-party plugin APIs (their real, unprefixed names), group
+	small helper classes, and span namespaces in one fixture file. Output-escaping
+	and commenting strictness stays enforced for shipped code under includes/.
+	-->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedClassFound">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Generic.Files.OneObjectStructurePerFile">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Universal.Files.SeparateFunctionsFromOO">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Universal.Namespaces.DisallowCurlyBraceSyntax">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Universal.Namespaces.DisallowDeclarationWithoutName">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Universal.Namespaces.OneDeclarationPerFile">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedNamespaceFound">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FileComment">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionCommentThrowTag">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.Security.EscapeOutput">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+</ruleset>
